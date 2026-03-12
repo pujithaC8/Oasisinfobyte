@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Agency - Landing Page</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(to bottom,#9ec5a4,#7fb48f);
+}
+
+.main{
+background:white;
+width:95%;
+max-width:1200px;
+margin:auto;
+border-radius:12px;
+box-shadow:0 30px 60px rgba(0,0,0,0.25);
+padding:40px 60px;
+}
+
+/* NAVBAR */
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:40px;
+position:sticky;
+top:0;
+background:white;
+z-index:1000;
+padding:10px 0;
+}
+
+.logo{
+font-weight:700;
+color:#1e88c9;
+font-size:20px;
+}
+
+.nav-links{
+display:flex;
+gap:20px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#1e88c9;
+font-weight:600;
+}
+
+/* SECTIONS */
+
+.section{
+padding:80px 0;
+}
+
+/* HERO */
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+flex-wrap:wrap;
+}
+
+.hero-img img{
+width:360px;
+height:360px;
+border-radius:50%;
+object-fit:cover;
+}
+
+.travel{
+font-family:'Pacifico',cursive;
+font-size:90px;
+color:#2e86c1;
+}
+
+.hero h1{
+font-size:70px;
+color:#2e86c1;
+line-height:1.1;
+}
+
+.hero p{
+margin-top:20px;
+color:#555;
+max-width:500px;
+}
+
+.btn{
+background:#1e88c9;
+color:white;
+padding:10px 22px;
+border:none;
+border-radius:25px;
+cursor:pointer;
+margin-top:15px;
+}
+
+/* CARDS */
+
+.cards{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.card{
+flex:1;
+min-width:250px;
+background:#f4f9fd;
+padding:20px;
+border-radius:10px;
+text-align:center;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:10px;
+}
+
+/* PRICING */
+
+.pricing{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.price-card{
+flex:1;
+min-width:250px;
+background:#f4f9fd;
+padding:25px;
+border-radius:10px;
+text-align:center;
+}
+
+/* BOOKING */
+
+.booking-wrapper{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:80px;
+flex-wrap:wrap;
+}
+
+.booking-form{
+flex:1;
+max-width:500px;
+}
+
+.booking-form input,
+.booking-form select{
+width:100%;
+padding:10px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+.booking-image img{
+width:100%;
+max-width:600px;
+border-radius:25px;
+box-shadow:0 25px 50px rgba(0,0,0,0.15);
+}
+
+/* CONTACT */
+
+.contact-wrapper{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:60px;
+flex-wrap:wrap;
+}
+
+.contact-form-box{
+flex:1;
+}
+
+.contact-form-box input,
+.contact-form-box textarea{
+width:100%;
+padding:12px;
+margin-bottom:10px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+.contact-image-box img{
+max-width:500px;
+border-radius:20px;
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* MODAL */
+
+.modal{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,0.6);
+justify-content:center;
+align-items:center;
+}
+
+.modal-content{
+background:white;
+padding:30px;
+border-radius:10px;
+width:400px;
+text-align:center;
+}
+
+.close{
+cursor:pointer;
+float:right;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.booking-wrapper{
+flex-direction:column;
+}
+
+.contact-wrapper{
+flex-direction:column;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="main">
+
+<!-- NAVBAR -->
+
+<div class="nav">
+<div class="logo">Travel Agency</div>
+
+<div class="nav-links">
+<a href="#home">Home</a>
+<a href="#packages">Packages</a>
+<a href="#pricing">Pricing</a>
+<a href="#booking">Booking</a>
+<a href="#info">Info</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+
+<!-- HOME -->
+
+<section id="home" class="section">
+
+<div class="hero">
+
+<div>
+
+<h1>Discover The <br> World</h1>
+
+<div class="travel">Travel</div>
+
+<p>
+Explore breathtaking destinations and experience the beauty 
+of the world with comfort, elegance, and unforgettable memories.
+</p>
+
+<button class="btn">Explore Now</button>
+
+</div>
+
+<div class="hero-img">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80">
+</div>
+
+</div>
+
+</section>
+
+<!-- PACKAGES -->
+
+<section id="packages" class="section">
+
+<h2>Travel Packages</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+<h3>Bali Escape</h3>
+<button class="btn" onclick="openModal('Bali Escape - 7 Days Beach Tour')">View Details</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1">
+<h3>Swiss Alps</h3>
+<button class="btn" onclick="openModal('Swiss Alps - Mountain Adventure')">View Details</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34">
+<h3>Paris Night Tour</h3>
+<button class="btn" onclick="openModal('Paris Night Tour - Eiffel Tower Experience')">View Details</button>
+</div>
+
+</div>
+
+</section>
+
+<!-- PRICING -->
+
+<section id="pricing" class="section">
+
+<h2>Pricing Plans</h2>
+
+<div class="pricing">
+
+<div class="price-card">
+<h3>Basic</h3>
+<h2>$499</h2>
+<p>3 Days / 2 Nights</p>
+</div>
+
+<div class="price-card">
+<h3>Standard</h3>
+<h2>$899</h2>
+<p>5 Days / 4 Nights</p>
+</div>
+
+<div class="price-card">
+<h3>Premium</h3>
+<h2>$1499</h2>
+<p>7 Days Luxury</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- BOOKING -->
+
+<section id="booking" class="section">
+
+<h2>Book Your Trip</h2>
+
+<div class="booking-wrapper">
+
+<form onsubmit="return bookTrip()" class="booking-form">
+
+<input id="bname" placeholder="Full Name" required>
+
+<input id="bemail" type="email" placeholder="Email" required>
+
+<select id="bpackage" required>
+<option value="">Select Package</option>
+<option>Bali Escape</option>
+<option>Swiss Alps</option>
+<option>Paris Night Tour</option>
+</select>
+
+<input id="bdate" type="date" required>
+
+<button class="btn">Book Now</button>
+
+<div id="bookMsg"></div>
+
+</form>
+
+<div class="booking-image">
+<img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff">
+</div>
+
+</div>
+
+</section>
+
+<!-- INFO -->
+
+<section id="info" class="section">
+
+<h2>About Us</h2>
+
+<p style="margin-top:15px;">
+Founded in 2013, Travel Agency has successfully organized over 5,000 international and domestic tours.
+</p>
+
+<ul style="margin-top:15px; padding-left:20px;">
+<li>✔ 24/7 Customer Support</li>
+<li>✔ Affordable Pricing</li>
+<li>✔ Personalized Planning</li>
+<li>✔ Trusted Partnerships</li>
+</ul>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="section">
+
+<h2>Contact Us</h2>
+
+<div class="contact-wrapper">
+
+<div class="contact-form-box">
+
+<form onsubmit="return contactSubmit()">
+
+<input placeholder="Full Name">
+<input placeholder="Email">
+
+<textarea rows="4" placeholder="Message"></textarea>
+
+<button class="btn">Send Message</button>
+
+<div id="contactMsg"></div>
+
+</form>
+
+</div>
+
+<div class="contact-image-box">
+
+<img src="https://images.unsplash.com/photo-1560264280-88b68371db39">
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+<!-- MODAL -->
+
+<div class="modal" id="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal()">✖</span>
+<h3 id="modalText"></h3>
+</div>
+</div>
+
+<script>
+
+function openModal(text){
+document.getElementById("modalText").innerText=text;
+document.getElementById("modal").style.display="flex";
+}
+
+function closeModal(){
+document.getElementById("modal").style.display="none";
+}
+
+function bookTrip(){
+document.getElementById("bookMsg").innerHTML="Booking successful!";
+return false;
+}
+
+function contactSubmit(){
+document.getElementById("contactMsg").innerHTML="Message sent!";
+return false;
+}
+
+</script>
+
+</body>
+</html>
